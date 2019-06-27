@@ -38,8 +38,8 @@ spec:
           value: "false"
         - name: HTTP_ENABLE
           value: "false"
-        - name: ES_HEAP_SIZE
-          value: "256m"
+        - name: ES_JAVA_OPTS
+          value: "-Xms256m -Xmx256m"
         - name: "DISCOVERY_SERVICE"
           value: "elasticsearch-discovery"
         ports:

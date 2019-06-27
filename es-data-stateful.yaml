@@ -57,15 +57,13 @@ spec:
           name: transport
           protocol: TCP
         volumeMounts:
-        - name: storage
+        - name: es-data
           mountPath: /data
   volumeClaimTemplates:
   - metadata:
-      name: storage
-      annotations:
-        volume.beta.kubernetes.io/storage-class: ssd
+      name: es-data
     spec:
       accessModes: [ "ReadWriteOnce" ]
       resources:
         requests:
-          storage: 20Gi
+          storage: 5Gi
